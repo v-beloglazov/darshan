@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "darshan",
+  "description": "Darshan by deites from all world",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",

@@ -860,6 +860,11 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
+"@splidejs/splide@^2.4.5":
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/@splidejs/splide/-/splide-2.4.5.tgz#9c86e6d5b1d28d17893dcf6efa7c98803b93dd1c"
+  integrity sha512-FJ2GZVpi44JbsX0i3nV+ClWXHX8wYb0fdiCljeP8ajfSam9+WsCTSTDpPDogy34sUNkIV2qE+W1Xo+wVhXax/Q==
+
 "@types/estree@*":
   version "0.0.45"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.45.tgz#e9387572998e5ecdac221950dab3e8c3b16af884"

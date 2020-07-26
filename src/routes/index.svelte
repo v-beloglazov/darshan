@@ -1,39 +1,35 @@
+<script context="module">
+  export async function preload(page, session) {
+    const fs = require('fs').promises;
+    const files = await fs.readdir('static/deites');
+    const imgPaths = files.map((file) => `deites/${file}`);
+    return { imgPaths };
+  }
+</script>
+
+<script>
+  import Slide from '../components/Slide.svelte';
+  import Slider from '../components/Slider.svelte';
+  export let imgPaths;
+</script>
+
 <style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
-	}
-
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
-
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
+  .img {
+    width: 100%;
+    height: 100%;
+  }
 </style>
 
 <svelte:head>
-	<title>Darshan</title>
+  <title>Darshan</title>
 </svelte:head>
 
-<h1>Hare Krishna</h1>
+<main class="page">
+  <Slider>
+    {#each imgPaths as src}
+      <Slide>
+        <div class="img" style={`background: url("${src}") center center / contain no-repeat`}></div>
+      </Slide>
+    {/each}
+  </Slider>
+</main>
